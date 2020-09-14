@@ -32,7 +32,7 @@ namespace TweakAsSharp
         }
     
         // not thread safe I guess
-        private static Script<object> _mBaseScript = CSharpScript.Create("");
+        private static readonly Script<object> _mBaseScript = CSharpScript.Create("");
 
         // not thread safe I guess
         public static object Evaluate(string code)
