@@ -9,14 +9,14 @@ namespace TweakAsSharp
         public static void RunEvalBenchmark(int iterationCount = 100)
         {
             float sum = 0, min = float.MaxValue, max = float.MinValue;
-            
-            for (int i = 0; i < iterationCount; i++)
+
+            iterationCount.Times((i) =>
             {
                 var timer = new Stopwatch();
                 timer.Start();
 
-                var value = TweakAS.Evaluate(""+i);    // hope that optimizer won't take this away
-                
+                var value = TweakAS.Evaluate("" + i); // hope that optimizer won't take this away
+
                 timer.Stop();
 
                 var elapsed = timer.ElapsedMilliseconds;
@@ -28,7 +28,7 @@ namespace TweakAsSharp
 
                 if (elapsed > max)
                     max = elapsed;
-            }
+            });
             
             Console.WriteLine($"Code Eval runtime: Min: {min}, Max: {max}, Mean: {sum/iterationCount}");
         }
