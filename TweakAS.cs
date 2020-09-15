@@ -72,8 +72,12 @@ namespace TweakAsSharp
             //Console.WriteLine($"{allLines.Length}");
 
             var lineNumber = info.Item2;
+
+            var columnNumber = info.Item3;
             
             //Console.WriteLine($"{lineNumber} / {allLines.Length}");
+            
+            //Console.WriteLine($"{columnNumber}");
 
             var line = allLines[lineNumber - 1];
             
@@ -81,7 +85,12 @@ namespace TweakAsSharp
 
             if (line.Contains(_mTokenToLookFor))
             {
-                var index = line.IndexOf(_mTokenToLookFor);
+                var index = line.IndexOf(_mTokenToLookFor, columnNumber);
+
+                if (index == -1)
+                {
+                    return 0;
+                }
 
                 var lengthToSkip = _mTokenToLookFor.Length;
 

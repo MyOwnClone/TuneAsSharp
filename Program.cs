@@ -14,7 +14,10 @@ namespace TweakAsSharp
             
             while (true)
             {
-                Console.WriteLine( counter + " " + TweakAS.tv("tests"));
+                //Console.WriteLine( counter + " " + TweakAS.tv("test") + " " + TweakAS.tv("moar")); // two tv's won't work yet
+                
+                Console.WriteLine( counter + " " + TweakAS.tv("test")); 
+                Console.WriteLine( counter + " " + TweakAS.tv("test"));
 
                 counter++;
             }
