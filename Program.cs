@@ -7,8 +7,17 @@ namespace TweakAsSharp
     {
         private static void Main()
         {
-            Console.WriteLine(TweakAS.GetFileLineInfo());
+            Console.WriteLine(TweakAS.GetFileLineColumnInfo());   Console.WriteLine(TweakAS.GetFileLineColumnInfo());
             Benchmark.RunEvalBenchmark();
+
+            int counter = 0;
+            
+            while (true)
+            {
+                Console.WriteLine( counter + " " + TweakAS.tv("tests"));
+
+                counter++;
+            }
         }
     }
 }
