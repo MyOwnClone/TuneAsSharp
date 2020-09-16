@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq.Expressions;
 using Microsoft.CodeAnalysis.CSharp.Scripting;
 using Microsoft.CodeAnalysis.Scripting;
 
@@ -31,6 +32,8 @@ namespace TweakAsSharp
                 var filename = frame.GetFileName();
                 var line = frame.GetFileLineNumber();
                 var column = frame.GetFileColumnNumber();
+
+                //frame.GetILOffset();
         
                 return new Tuple<string, int, int>(filename, line, column);
             }
@@ -47,6 +50,14 @@ namespace TweakAsSharp
         public static object Evaluate(string code)
         {
             return _mBaseScript.ContinueWith(code).RunAsync().Result.ReturnValue;
+        }
+        
+        // not thread safe I guess
+        public static Func<int, int, int> EvaluateLambda(string code)
+        {
+            //Console.WriteLine(_mBaseScript.ContinueWith(code).RunAsync().);
+
+            return null;
         }
 
         public static object tv(object defaultValue)
