@@ -21,7 +21,7 @@ namespace TweakAsSharp
             Console.WriteLine(" Done");
         }
         
-        public static Tuple<string, int, int> GetFileLineColumnInfo(int frameIndex = 1)
+        public static Tuple<string, int, int, int> GetFileLineColumnInfo(int frameIndex = 1)
         {
             var st = new StackTrace(true);
 
@@ -33,17 +33,17 @@ namespace TweakAsSharp
                 var line = frame.GetFileLineNumber();
                 var column = frame.GetFileColumnNumber();
 
-                //frame.GetILOffset();
+                var ilOffset = frame.GetILOffset();
         
-                return new Tuple<string, int, int>(filename, line, column);
+                return new Tuple<string, int, int, int>(filename, line, column, ilOffset);
             }
 
             return null;
         }
 
-        public static string ConvertFileLineColumnInfo2StringHash(Tuple<string, int, int> info)
+        public static string ConvertFileLineColumnInfo2StringHash(Tuple<string, int, int, int> info)
         {
-            return $"{info.Item1}:{info.Item2}:{info.Item3}";
+            return $"{info.Item1}:{info.Item2}:{info.Item3}:{info.Item4}";
         }
 
         // not thread safe I guess
@@ -69,7 +69,7 @@ namespace TweakAsSharp
             return value;
         }
 
-        private static object ResolveValue(Tuple<string,int,int> info, object defaultValue)
+        private static object ResolveValue(Tuple<string,int,int,int> info, object defaultValue)
         {
             var filename = info.Item1;
 
@@ -83,45 +83,53 @@ namespace TweakAsSharp
             //Console.WriteLine($"{allLines.Length}");
 
             var lineNumber = info.Item2;
-
+            
             var columnNumber = info.Item3;
             
             //Console.WriteLine($"{lineNumber} / {allLines.Length}");
             
             //Console.WriteLine($"{columnNumber}");
 
-            var line = allLines[lineNumber - 1];
+            var lineString = allLines[lineNumber - 1];
             
             //Console.WriteLine($"{line}");
 
-            if (line.Contains(_mTokenToLookFor))
+            if (lineString.Contains(_mTokenToLookFor))
             {
-                var index = line.IndexOf(_mTokenToLookFor, columnNumber);
+                int index = columnNumber;
+                string valueString = string.Empty;
 
-                if (index == -1)
+                do
                 {
-                    return 0;
-                }
+                    index = lineString.IndexOf(_mTokenToLookFor, index, StringComparison.Ordinal);
 
-                var lengthToSkip = _mTokenToLookFor.Length;
+                    if (index == -1)
+                    {
+                        break;
+                    }
 
-                var braceIndex = line.IndexOf("(", index + lengthToSkip);
+                    var lengthToSkip = _mTokenToLookFor.Length;
 
-                if (braceIndex == -1)
-                {
-                    return 0;
-                }
+                    var braceIndex = lineString.IndexOf("(", index + lengthToSkip, StringComparison.Ordinal);
 
-                var closingBraceIndex = line.IndexOf(")", braceIndex + 1);
+                    if (braceIndex == -1)
+                    {
+                        break;
+                    }
 
-                if (closingBraceIndex == -1)
-                {
-                    return 0;
-                }
+                    var closingBraceIndex = lineString.IndexOf(")", braceIndex + 1, StringComparison.Ordinal);
 
-                var valueString = line.Substring(braceIndex + 1, closingBraceIndex - braceIndex - 1);
-                
-                //Console.WriteLine(valueString);
+                    if (closingBraceIndex == -1)
+                    {
+                        break;
+                    }
+
+                    valueString = lineString.Substring(braceIndex + 1, closingBraceIndex - braceIndex - 1);
+
+                    index = closingBraceIndex + 1;
+
+                    //Console.WriteLine(valueString);
+                } while (index != -1);
 
                 return Evaluate(valueString);
             }

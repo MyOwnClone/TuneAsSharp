@@ -14,7 +14,7 @@ namespace TweakAsSharp
             
             //Func<int, int, int> z = (int a, int b) => a + b;
             
-            var result = Task.Run<object>(async () =>
+            /*var result = Task.Run<object>(async () =>
             {
                 // CSharpScript.RunAsync can also be generic with typed ReturnValue
                 var s = await CSharpScript.RunAsync(@"using System;");
@@ -46,23 +46,23 @@ namespace TweakAsSharp
                 
                 return s.ReturnValue;
                     
-            }).Result;
+            }).Result;*/
 
             //var result = TweakAS.EvaluateLambda("(a, b) => {  return a + b; }");
             
             //Console.WriteLine(result.GetType());
 
-            /*int counter = 0;
+            int counter = 0;
             
             while (true)
             {
                 //Console.WriteLine( counter + " " + TweakAS.tv("test") + " " + TweakAS.tv("moar")); // TODO: two tv's won't work yet, fix them similar to how it's done in tweak_af, use frame.GetILOffset() to determine order on the line?
                 
                 Console.WriteLine( counter + " " + TweakAS.tv("test")); 
-                Console.WriteLine( counter + " " + TweakAS.tv("test"));
+                Console.WriteLine( counter + " " + TweakAS.tv("testx"));
 
                 counter++;
-            }*/
+            }
         }
     }
 }
