@@ -9,7 +9,7 @@ namespace TweakAsSharp
         {
             //Benchmark.RunEvalBenchmark();
 
-            int counter = 0;
+            var counter = 0;
             
             while (true)
             {

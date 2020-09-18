@@ -1,6 +1,6 @@
 namespace TweakAsSharp
 {
-    public class OtherModule
+    public static class OtherModule
     {
         public static int MethodWithTweakableValue()
         {
