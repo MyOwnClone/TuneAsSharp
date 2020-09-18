@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq.Expressions;
 using Microsoft.CodeAnalysis.CSharp.Scripting;
 using Microsoft.CodeAnalysis.Scripting;
 
@@ -51,19 +50,9 @@ namespace TweakAsSharp
         {
             return _mBaseScript.ContinueWith(code).RunAsync().Result.ReturnValue;
         }
-        
-        // not thread safe I guess
-        public static Func<int, int, int> EvaluateLambda(string code)
-        {
-            //Console.WriteLine(_mBaseScript.ContinueWith(code).RunAsync().);
-
-            return null;
-        }
 
         public static object tv(object defaultValue)
         {
-            //Console.WriteLine(ConvertFileLineColumnInfo2StringHash(GetFileLineColumnInfo(2)));
-
             object value = ResolveValue(GetFileLineColumnInfo(2), defaultValue, GetCallCount());
 
             return value;
@@ -79,20 +68,12 @@ namespace TweakAsSharp
             {
                 return defaultValue;
             }
-            
-            //Console.WriteLine($"{allLines.Length}");
 
             var lineNumber = info.Item2;
             
             var columnNumber = info.Item3;
-            
-            //Console.WriteLine($"{lineNumber} / {allLines.Length}");
-            
-            //Console.WriteLine($"{columnNumber}");
 
             var lineString = allLines[lineNumber - 1];
-            
-            //Console.WriteLine($"{line}");
 
             if (lineString.Contains(_mTokenToLookFor))
             {
@@ -130,13 +111,10 @@ namespace TweakAsSharp
 
                     index = closingBraceIndex + 1;
 
-                    //Console.WriteLine(valueString);
-
                     matchCounter++;
                 } while (index != -1 && (matchCounter-1) != matchIndex);
 
                 return Evaluate(valueString);
-                //return 0;
             }
 
             return 0;
