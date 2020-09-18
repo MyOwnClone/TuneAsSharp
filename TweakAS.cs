@@ -136,6 +136,7 @@ namespace TweakAsSharp
                 } while (index != -1 && (matchCounter-1) != matchIndex);
 
                 return Evaluate(valueString);
+                //return 0;
             }
 
             return 0;
@@ -165,20 +166,18 @@ namespace TweakAsSharp
                     {
                         return index;
                     }
-                    else
-                    {
-                        lineInfo[line].Add(offset);
 
-                        return 0;
-                    }
+                    lineInfo[line].Add(offset);
+
+                    return 0;
                 }
                 
-                lineInfo.Add(line, new List<int>());
+                lineInfo.Add(line, new List<int>() {offset});
 
                 return 0;
             }
             
-            map.Add(filename, new Dictionary<int, List<int>> { { line, new List<int>() } });
+            map.Add(filename, new Dictionary<int, List<int>> { { line, new List<int>() { offset} } });
             
             return 0;
         }

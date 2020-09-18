@@ -6,7 +6,7 @@ namespace TweakAsSharp
 {
     public static class Benchmark
     {
-        public static void RunEvalBenchmark(int iterationCount = 100)
+        /*public static void RunEvalBenchmark(int iterationCount = 100)
         {
             float sum = 0, min = float.MaxValue, max = float.MinValue;
 
@@ -32,6 +32,6 @@ namespace TweakAsSharp
             });
             
             Console.WriteLine($"Code Eval runtime: Min: {min}, Max: {max}, Mean: {sum/iterationCount}");
-        }
+        }*/
     }
 }

@@ -10,7 +10,7 @@ namespace TweakAsSharp
         private static void Main()
         {
             Console.WriteLine(TweakAS.GetFileLineColumnInfo());   Console.WriteLine(TweakAS.GetFileLineColumnInfo());
-            Benchmark.RunEvalBenchmark();
+            //Benchmark.RunEvalBenchmark();
             
             //Func<int, int, int> z = (int a, int b) => a + b;
             
