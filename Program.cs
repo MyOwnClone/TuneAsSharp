@@ -69,8 +69,8 @@ namespace TweakAsSharp
             {
                 Console.WriteLine( counter + " " + TweakAS.tv("test") + " " + TweakAS.tv("moar")); // TODO: two tv's won't work yet, fix them similar to how it's done in tweak_af, use frame.GetILOffset() to determine order on the line?
                 
-                //Console.WriteLine( counter + " " + TweakAS.tv("test")); 
-                //Console.WriteLine( counter + " " + TweakAS.tv("testx"));
+                Console.WriteLine( counter + " " + TweakAS.tv("gloryhole")); 
+                Console.WriteLine( counter + " " + TweakAS.tv("testxyz"));
 
                 counter++;
             }
