@@ -52,13 +52,18 @@ namespace TweakAsSharp
             
             //Console.WriteLine(result.GetType());
 
-            Console.WriteLine(CallPerLineCountTest.GetCallCount()); Console.WriteLine(CallPerLineCountTest.GetCallCount());
+            /*Console.WriteLine(CallPerLineCountTest.GetCallCount()); Console.WriteLine(CallPerLineCountTest.GetCallCount());
             
             Console.WriteLine(CallPerLineCountTest.GetCallCount()); Console.WriteLine(CallPerLineCountTest.GetCallCount()); Console.WriteLine(CallPerLineCountTest.GetCallCount());
             
-            Console.WriteLine(CallPerLineCountTest.GetCallCount());
+            Console.WriteLine(CallPerLineCountTest.GetCallCount());*/
 
-            /*int counter = 0;
+            /*while (true)
+            {
+                Console.WriteLine(TweakAS.GetCallCount(2)); Console.WriteLine(TweakAS.GetCallCount(2));
+            }*/
+
+            int counter = 0;
             
             while (true)
             {
@@ -68,7 +73,7 @@ namespace TweakAsSharp
                 //Console.WriteLine( counter + " " + TweakAS.tv("testx"));
 
                 counter++;
-            }*/
+            }
         }
     }
 }

@@ -64,12 +64,12 @@ namespace TweakAsSharp
         {
             //Console.WriteLine(ConvertFileLineColumnInfo2StringHash(GetFileLineColumnInfo(2)));
 
-            object value = ResolveValue(GetFileLineColumnInfo(2), defaultValue);
+            object value = ResolveValue(GetFileLineColumnInfo(2), defaultValue, GetCallCount());
 
             return value;
         }
 
-        private static object ResolveValue(Tuple<string,int,int,int> info, object defaultValue)
+        private static object ResolveValue(Tuple<string,int,int,int> info, object defaultValue, int matchIndex = 0)
         {
             var filename = info.Item1;
 
@@ -98,6 +98,8 @@ namespace TweakAsSharp
             {
                 int index = columnNumber;
                 string valueString = string.Empty;
+
+                int matchCounter = 0;
 
                 do
                 {
@@ -129,11 +131,55 @@ namespace TweakAsSharp
                     index = closingBraceIndex + 1;
 
                     //Console.WriteLine(valueString);
-                } while (index != -1);
+
+                    matchCounter++;
+                } while (index != -1 && (matchCounter-1) != matchIndex);
 
                 return Evaluate(valueString);
             }
 
+            return 0;
+        }
+        
+        // filename, line, call_count
+        private static readonly Dictionary<string, Dictionary<int, List<int>>> map = new Dictionary<string, Dictionary<int, List<int>>>();
+        
+        public static int GetCallCount(int frameIndex = 3)
+        {
+            var info = TweakAS.GetFileLineColumnInfo(frameIndex);
+
+            var filename = info.Item1;
+            var line = info.Item2;
+
+            var offset = info.Item4;
+
+            if (map.ContainsKey(filename))
+            {
+                var lineInfo = map[filename];
+
+                if (lineInfo.ContainsKey(line))
+                {
+                    int index = lineInfo[line].IndexOf(offset);
+
+                    if (index >= 0)
+                    {
+                        return index;
+                    }
+                    else
+                    {
+                        lineInfo[line].Add(offset);
+
+                        return 0;
+                    }
+                }
+                
+                lineInfo.Add(line, new List<int>());
+
+                return 0;
+            }
+            
+            map.Add(filename, new Dictionary<int, List<int>> { { line, new List<int>() } });
+            
             return 0;
         }
     }

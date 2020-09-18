@@ -7,6 +7,8 @@ namespace TweakAsSharp
     {
         // filename, line, call_count
         private static readonly Dictionary<string, Dictionary<int, int>> map = new Dictionary<string, Dictionary<int, int>>();
+
+        private static int oldLine = -1;
         
         public static int GetCallCount()
         {
@@ -19,17 +21,28 @@ namespace TweakAsSharp
             {
                 var lineInfo = map[filename];
 
+                if (line != oldLine)
+                {
+                    lineInfo.Clear();
+                }
+
                 if (lineInfo.ContainsKey(line))
                 {
+                    oldLine = line;
+                    
                     return lineInfo[line]++;
                 }
                 
                 lineInfo.Add(line, 1);
 
+                oldLine = line;
+
                 return 0;
             }
             
             map.Add(filename, new Dictionary<int, int> { { line, 1 } });
+
+            oldLine = line;
             
             return 0;
         }
