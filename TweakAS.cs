@@ -1,27 +1,15 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Microsoft.CodeAnalysis.CSharp.Scripting;
-using Microsoft.CodeAnalysis.Scripting;
 
 namespace TweakAsSharp
 {
     static class TweakAS
     {
         // not thread safe I guess
-        private static readonly Script<object> baseScript = CSharpScript.Create("");
         private const string tokenToLookFor = "t" + "v";
-        
-        
         // filename, line, call_count
         private static readonly Dictionary<string, Dictionary<int, List<int>>> lineMap = new Dictionary<string, Dictionary<int, List<int>>>();
-
-        static TweakAS()
-        {
-            Console.Write("Warming up the runtime...");
-            Evaluate("42");    // warm up
-            Console.WriteLine(" Done\n=======");
-        }
 
         private static Tuple<string, int, int, int> GetFileLineColumnInfo(int frameIndex = 1)
         {
@@ -43,10 +31,6 @@ namespace TweakAsSharp
         }
 
         // not thread safe I guess
-        public static object Evaluate(string code)
-        {
-            return baseScript.ContinueWith(code).RunAsync().Result.ReturnValue;
-        }
 
         public static object tv(object defaultValue)
         {
@@ -108,7 +92,7 @@ namespace TweakAsSharp
                 matchCounter++;
             } while ((matchCounter-1) != matchIndex);
 
-            return Evaluate(valueString);
+            return Parser.Evaluate(valueString);
 
         }
 

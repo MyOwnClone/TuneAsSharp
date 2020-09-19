@@ -16,7 +16,7 @@ namespace TweakAsSharp
                 timer.Start();
 
                 // ReSharper disable once UnusedVariable
-                var value = TweakAS.Evaluate("" + i); // hope that optimizer won't take this away
+                var value = Parser.Evaluate("" + i); // hope that optimizer won't take this away
 
                 timer.Stop();
 
