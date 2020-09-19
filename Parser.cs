@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using Microsoft.CodeAnalysis.CSharp.Scripting;
 using Microsoft.CodeAnalysis.Scripting;
 
@@ -6,56 +7,41 @@ namespace TweakAsSharp
 {
     public static class Parser
     {
-        private static readonly Script<object> baseScript = CSharpScript.Create("");
+        private static readonly Script<object> BaseScript = CSharpScript.Create("");
 
         public static bool UseRoslyn = true;
-        private static bool WarmUpDone;
+        private static bool _warmUpDone;
 
-        private static object EvaluateInner(string code)
+        private static object EvaluateWithRoslyn(string code)
         {
-            return baseScript.ContinueWith(code).RunAsync().Result.ReturnValue;
+            return BaseScript.ContinueWith(code).RunAsync().Result.ReturnValue;
         }
 
         public static object Evaluate(string code)
         {
-            if (UseRoslyn && !WarmUpDone)
+            // ReSharper disable once InvertIf
+            if (UseRoslyn && !_warmUpDone)
             {
                 Console.Write("Warming up the runtime...");
 
-                EvaluateInner(code);   // warm up
+                EvaluateWithRoslyn(code);   // warm up
                 
                 Console.WriteLine(" Done\n=======");
 
-                WarmUpDone = true;
+                _warmUpDone = true;
             }
             
-            return UseRoslyn ? EvaluateInner(code) : Parse(code);
+            return UseRoslyn ? EvaluateWithRoslyn(code) : Parse(code);
         }
 
         private static bool IsInt(string code)
         {
-            foreach (var c in code)
-            {
-                if (!Char.IsDigit(c))
-                {
-                    return false;
-                }
-            }
-            
-            return true;
+            return code.All(char.IsDigit);
         }
 
         private static bool IsFloat(string code)
         {
-            foreach (var c in code)
-            {
-                if (!Char.IsDigit(c) && c != 'f' && c != '.')
-                {
-                    return false;
-                }
-            }
-            
-            return true;
+            return code.All(c => char.IsDigit(c) || c == 'f' || c == '.');
         }
 
         private static bool IsString(string code)
@@ -67,20 +53,22 @@ namespace TweakAsSharp
         {
             if (IsInt(code))
             {
-                return (int) int.Parse(code);
+                return int.Parse(code);
             }
-            else if (IsFloat(code))
+
+            if (IsFloat(code))
             {
-                code = code.Replace("f", "");
+                code = code.Replace("f", "");    // TODO: ReplaceAll()
                 
-                return (float) float.Parse(code);
+                return float.Parse(code);
             }
-            else if (IsString(code))
+
+            if (IsString(code))
             {
                 return code.Substring(1, code.Length - 2);
             }
-            else
-                throw new NotImplementedException("Unexpected type!!!");
+
+            throw new NotImplementedException("Unexpected type!!!");
         }
     }
 }
