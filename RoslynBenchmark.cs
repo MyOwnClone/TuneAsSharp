@@ -36,8 +36,8 @@ namespace TweakAsSharp
             });
 
             Parser.UseRoslyn = originalSetting;
-            
-            Console.WriteLine($"Code Eval runtime: Min: {min}, Max: {max}, Mean: {sum/iterationCount}");
+
+            Console.WriteLine($"Code Eval runtime: Min: {min}, Max: {max}, Mean: {sum / iterationCount}");
         }
     }
 }

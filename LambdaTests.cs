@@ -26,20 +26,20 @@ namespace TweakAsSharp
                 Console.WriteLine("inspecting defined variables:");
                 foreach (var variable in s.Variables)
                 {
-                    Console.WriteLine("name: {0}, type: {1}, value: {2}", variable.Name, variable.Type.Name, variable.Value);
+                    Console.WriteLine("name: {0}, type: {1}, value: {2}", variable.Name, variable.Type.Name,
+                        variable.Value);
 
                     if (variable.Type.Name.Contains("Func"))
                     {
                         var value = variable.Value as Func<int, int, int>;
 
                         var result = value(1, 2);
-                        
+
                         Console.WriteLine($"Result of calling lambda: {result}");
                     }
                 }
-                
+
                 return s.ReturnValue;
-                    
             }).Result;
         }
     }

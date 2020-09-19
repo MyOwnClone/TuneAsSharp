@@ -24,13 +24,13 @@ namespace TweakAsSharp
             {
                 Console.Write("Warming up the runtime...");
 
-                EvaluateWithRoslyn(code);   // warm up
-                
+                EvaluateWithRoslyn(code); // warm up
+
                 Console.WriteLine(" Done\n=======");
 
                 _warmUpDone = true;
             }
-            
+
             return UseRoslyn ? EvaluateWithRoslyn(code) : Parse(code);
         }
 
@@ -58,8 +58,8 @@ namespace TweakAsSharp
 
             if (IsFloat(code))
             {
-                code = code.Replace("f", "");    // TODO: ReplaceAll()
-                
+                code = code.Replace("f", ""); // TODO: ReplaceAll()
+
                 return float.Parse(code);
             }
 
