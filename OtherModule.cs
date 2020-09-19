@@ -4,7 +4,7 @@ namespace TweakAsSharp
     {
         public static int MethodWithTweakableValue()
         {
-            return (int) TweakAS.tv(333);
+            return (int) TweakAS.tv(555);
         }
     }
 }

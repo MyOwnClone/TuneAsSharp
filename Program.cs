@@ -9,6 +9,8 @@ namespace TweakAsSharp
         {
             //Benchmark.RunEvalBenchmark();
 
+            Parser.UseRoslyn = false;
+
             var counter = 0;
             
             while (true)
