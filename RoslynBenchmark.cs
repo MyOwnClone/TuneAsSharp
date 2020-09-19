@@ -4,11 +4,15 @@ using System.Diagnostics;
 // ReSharper disable once CheckNamespace
 namespace TweakAsSharp
 {
-    public static class Benchmark
+    public static class RoslynBenchmark
     {
-        public static void RunEvalBenchmark(int iterationCount = 100)
+        public static void Run(int iterationCount = 100)
         {
             float sum = 0, min = float.MaxValue, max = float.MinValue;
+
+            var originalSetting = Parser.UseRoslyn;
+
+            Parser.UseRoslyn = true;
 
             iterationCount.Times((i) =>
             {
@@ -30,6 +34,8 @@ namespace TweakAsSharp
                 if (elapsed > max)
                     max = elapsed;
             });
+
+            Parser.UseRoslyn = originalSetting;
             
             Console.WriteLine($"Code Eval runtime: Min: {min}, Max: {max}, Mean: {sum/iterationCount}");
         }

@@ -7,9 +7,9 @@ namespace TweakAsSharp
     {
         private static void Main()
         {
-            //Benchmark.RunEvalBenchmark();
+            //RoslynBenchmark.Run();
 
-            Parser.UseRoslyn = false;
+            Parser.UseRoslyn = false;    // simpler literals can be parsed without Roslyn, we'll need it only for actual code (tweakable functions)
 
             var counter = 0;
             
