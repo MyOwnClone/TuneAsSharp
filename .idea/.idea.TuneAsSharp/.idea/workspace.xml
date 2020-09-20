@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3194e73a-d362-4508-b313-7d3dc6d28739" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TuneAsSharp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TuneAsSharp/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UnitTestRunner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UnitTestRunner.cs" afterDir="false" />
     </list>
@@ -47,6 +48,7 @@
         <option value="$PROJECT_DIR$/TweakAS.cs" />
         <option value="$PROJECT_DIR$/UnitTest.cs.og" />
         <option value="$PROJECT_DIR$/UnitTest.cs" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/UnitTestRunner.cs" />
         <option value="$PROJECT_DIR$/Program.cs" />
       </list>
@@ -93,7 +95,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1600590408868</updated>
-      <workItem from="1600590420437" duration="4584000" />
+      <workItem from="1600590420437" duration="5024000" />
     </task>
     <task id="LOCAL-00001" summary="Refactoring">
       <created>1600590522970</created>
@@ -137,7 +139,21 @@
       <option name="project" value="LOCAL" />
       <updated>1600595720503</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="WIP">
+      <created>1600595888519</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1600595888519</updated>
+    </task>
+    <task id="LOCAL-00008" summary="gitignore updated">
+      <created>1600595939147</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1600595939147</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
@@ -147,9 +163,10 @@
     <MESSAGE value="Refactoring" />
     <MESSAGE value="Unit test added" />
     <MESSAGE value="tests updaded" />
-    <MESSAGE value="WIP" />
     <MESSAGE value="UnitTestRunner fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="UnitTestRunner fixed" />
+    <MESSAGE value="WIP" />
+    <MESSAGE value="gitignore updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="gitignore updated" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1384" y="742" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600593852710">
@@ -160,26 +177,26 @@
       <screen x="0" y="0" width="3840" height="2160" />
     </state>
     <state x="1592" y="885" key="#com.intellij.fileTypes.FileTypeChooser/0.0.3840.2160@0.0.3840.2160" timestamp="1600591375171" />
-    <state x="1514" y="593" key="CommitChangelistDialog2" timestamp="1600595720404">
+    <state x="1514" y="593" key="CommitChangelistDialog2" timestamp="1600595939066">
       <screen x="0" y="0" width="3840" height="2160" />
     </state>
-    <state x="1514" y="593" key="CommitChangelistDialog2/0.0.3840.2160@0.0.3840.2160" timestamp="1600595720404" />
-    <state width="3798" height="656" key="GridCell.Tab.0.bottom" timestamp="1600595793395">
+    <state x="1514" y="593" key="CommitChangelistDialog2/0.0.3840.2160@0.0.3840.2160" timestamp="1600595939066" />
+    <state width="3798" height="656" key="GridCell.Tab.0.bottom" timestamp="1600596237436">
       <screen x="0" y="0" width="3840" height="2160" />
     </state>
-    <state width="3798" height="656" key="GridCell.Tab.0.bottom/0.0.3840.2160@0.0.3840.2160" timestamp="1600595793395" />
-    <state width="3798" height="656" key="GridCell.Tab.0.center" timestamp="1600595793394">
+    <state width="3798" height="656" key="GridCell.Tab.0.bottom/0.0.3840.2160@0.0.3840.2160" timestamp="1600596237436" />
+    <state width="3798" height="656" key="GridCell.Tab.0.center" timestamp="1600596237435">
       <screen x="0" y="0" width="3840" height="2160" />
     </state>
-    <state width="3798" height="656" key="GridCell.Tab.0.center/0.0.3840.2160@0.0.3840.2160" timestamp="1600595793394" />
-    <state width="3798" height="656" key="GridCell.Tab.0.left" timestamp="1600595793393">
+    <state width="3798" height="656" key="GridCell.Tab.0.center/0.0.3840.2160@0.0.3840.2160" timestamp="1600596237435" />
+    <state width="3798" height="656" key="GridCell.Tab.0.left" timestamp="1600596237434">
       <screen x="0" y="0" width="3840" height="2160" />
     </state>
-    <state width="3798" height="656" key="GridCell.Tab.0.left/0.0.3840.2160@0.0.3840.2160" timestamp="1600595793393" />
-    <state width="3798" height="656" key="GridCell.Tab.0.right" timestamp="1600595793394">
+    <state width="3798" height="656" key="GridCell.Tab.0.left/0.0.3840.2160@0.0.3840.2160" timestamp="1600596237434" />
+    <state width="3798" height="656" key="GridCell.Tab.0.right" timestamp="1600596237436">
       <screen x="0" y="0" width="3840" height="2160" />
     </state>
-    <state width="3798" height="656" key="GridCell.Tab.0.right/0.0.3840.2160@0.0.3840.2160" timestamp="1600595793394" />
+    <state width="3798" height="656" key="GridCell.Tab.0.right/0.0.3840.2160@0.0.3840.2160" timestamp="1600596237436" />
     <state width="3798" height="829" key="GridCell.Tab.1.bottom" timestamp="1600594683098">
       <screen x="0" y="0" width="3840" height="2160" />
     </state>
@@ -254,13 +271,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/UnitTestRunner.cs</url>
-          <line>15</line>
+          <line>18</line>
           <properties documentPath="$PROJECT_DIR$/UnitTestRunner.cs" initialLine="14">
             <startOffsets>
-              <option value="342" />
+              <option value="458" />
             </startOffsets>
             <endOffsets>
-              <option value="358" />
+              <option value="474" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />
