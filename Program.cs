@@ -9,7 +9,7 @@ namespace TuneAsSharp
         {
             //RoslynBenchmark.Run();
 
-            Parser.UseRoslyn =
+            /*Parser.UseRoslyn =
                 false; // simpler literals can be parsed without Roslyn, we'll need it only for actual code (tweakable functions)
 
             var counter = 0;
@@ -24,7 +24,9 @@ namespace TuneAsSharp
                 Console.WriteLine(OtherModule.MethodWithTweakableValue());
 
                 counter++;
-            }
+            }*/
+
+            Console.WriteLine(UnitTestRunner.Run());
         }
     }
 }

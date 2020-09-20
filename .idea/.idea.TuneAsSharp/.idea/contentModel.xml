@@ -16,6 +16,9 @@
         </e>
       </e>
       <e p="OtherModule.cs" t="Include" />
+      <e p="OtherModuleUnitTest.cs" t="Include" />
+      <e p="OtherModuleUnitTest.cs.new" t="Include" />
+      <e p="OtherModuleUnitTest.cs.og" t="Include" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="Parser.cs" t="Include" />
       <e p="Program.cs" t="Include" />
@@ -24,6 +27,10 @@
       <e p="TuneAsSharp.csproj" t="IncludeRecursive" />
       <e p="TuneAsSharp.sln" t="IncludeFlat" />
       <e p="TweakAS.cs" t="Include" />
+      <e p="UnitTest.cs" t="Include" />
+      <e p="UnitTest.cs.new" t="Include" />
+      <e p="UnitTest.cs.og" t="Include" />
+      <e p="UnitTestRunner.cs" t="Include" />
     </e>
   </component>
 </project>
