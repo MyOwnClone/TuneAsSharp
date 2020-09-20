@@ -14,7 +14,7 @@ namespace TuneAsSharp
             
             TriggerChange();
 
-            var properExit = thread.Join(1000);
+            var properExit = thread.Join(10000000);
 
             if (!properExit)
             {

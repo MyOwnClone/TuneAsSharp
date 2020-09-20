@@ -26,7 +26,9 @@ namespace TuneAsSharp
                 counter++;
             }*/
 
-            Console.WriteLine(UnitTestRunner.Run());
+            //Console.WriteLine(UnitTestRunner.Run());
+            
+            UnitTest.TestFunctionNoRoslyn();
         }
     }
 }

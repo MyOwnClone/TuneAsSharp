@@ -50,6 +50,11 @@ namespace TuneAsSharp
 
             var allLines = System.IO.File.ReadAllLines(filename);
 
+            if (allLines == null)
+            {
+                return defaultValue;
+            }
+
             if (allLines.Length == 0)
             {
                 return defaultValue;
