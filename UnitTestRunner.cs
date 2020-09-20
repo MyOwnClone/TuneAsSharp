@@ -10,7 +10,7 @@ namespace TuneAsSharp
             var thread = new Thread(UnitTest.TestFunctionNoRoslyn);
             thread.Start();
             
-            Thread.Sleep(100);
+            Thread.Sleep(1000);
             
             TriggerChange();
 

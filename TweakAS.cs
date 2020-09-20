@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 
 namespace TuneAsSharp
 {
@@ -48,7 +49,16 @@ namespace TuneAsSharp
         {
             var (filename, lineNumber, columnNumber, _) = info;
 
-            var allLines = System.IO.File.ReadAllLines(filename);
+            string[] allLines;
+
+            try
+            {
+                allLines = File.ReadAllLines(filename);
+            }
+            catch (IOException)
+            {
+                return defaultValue;
+            }
 
             if (allLines == null)
             {
