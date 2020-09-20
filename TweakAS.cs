@@ -44,6 +44,27 @@ namespace TuneAsSharp
 
             return value;
         }
+        
+        public static int tv(int defaultValue)
+        {
+            var value = (int) ResolveValue(GetFileLineColumnInfo(2), defaultValue, GetCallCount());
+
+            return value;
+        }
+        
+        public static float tv(float defaultValue)
+        {
+            var value = (float) ResolveValue(GetFileLineColumnInfo(2), defaultValue, GetCallCount());
+
+            return value;
+        }
+        
+        public static string tv(string defaultValue)
+        {
+            var value = (string) ResolveValue(GetFileLineColumnInfo(2), defaultValue, GetCallCount());
+
+            return value;
+        }
 
         private static object ResolveValue(Tuple<string, int, int, int> info, object defaultValue, int matchIndex = 0)
         {

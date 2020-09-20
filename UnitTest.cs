@@ -20,7 +20,7 @@ namespace TuneAsSharp
 
             while (true)
             {
-                var condition1 = TweakAS.tv("empty"); var condition2 = TweakAS.tv("empty2");
+                var condition1 = (string) TweakAS.tv("empty"); var condition2 = (string) TweakAS.tv("empty2");
 
                 var condition3 = (float) TweakAS.tv(0.0f);
 

@@ -12,6 +12,12 @@
       <DebugSymbols>true</DebugSymbols>
     </PropertyGroup>
 
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+      <DebugSymbols>true</DebugSymbols>
+      <DebugType>pdbonly</DebugType>
+      <Optimize>false</Optimize>
+    </PropertyGroup>
+
     <ItemGroup>
       <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Scripting" Version="3.8.0-2.final" />
     </ItemGroup>
