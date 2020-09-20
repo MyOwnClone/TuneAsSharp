@@ -6,7 +6,7 @@ namespace TuneAsSharp
 {
     public static class UnitTestRunner
     {
-        public static bool Run()
+        public static bool RunNoRoslyn()
         {
             var thread = new Thread(UnitTest.TestFunctionNoRoslyn);
             thread.Start();
@@ -19,7 +19,32 @@ namespace TuneAsSharp
 
             if (!properExit)
             {
-                Console.WriteLine("Test FAILED!");
+                Console.WriteLine("NoRoslyn Test FAILED!");
+                
+                Clean();
+                
+                Environment.Exit(1);
+            }
+            
+            Clean();
+
+            return properExit;
+        }
+        
+        public static bool RunRoslyn()
+        {
+            var thread = new Thread(UnitTest.TestFunctionRoslyn);
+            thread.Start();
+            
+            Thread.Sleep(1000);
+            
+            TriggerChange();
+
+            var properExit = thread.Join(10000000);
+
+            if (!properExit)
+            {
+                Console.WriteLine("Roslyn Test FAILED!");
                 
                 Clean();
                 
