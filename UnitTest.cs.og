@@ -20,9 +20,9 @@ namespace TuneAsSharp
 
             while (true)
             {
-                var condition1 = TweakAS.tv("empty");
+                var condition1 = TweakAS.tv("empty"); var condition2 = TweakAS.tv("empty2");
                 
-                if (condition1.Equals("test"))
+                if (condition1.Equals("test") && condition2.Equals("moarolca"))
                 {
                     Console.WriteLine("Someone touched my tralala!");
                     
