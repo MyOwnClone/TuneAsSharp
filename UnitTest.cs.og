@@ -21,8 +21,12 @@ namespace TuneAsSharp
             while (true)
             {
                 var condition1 = TweakAS.tv("empty"); var condition2 = TweakAS.tv("empty2");
+
+                var condition3 = (float) TweakAS.tv(0.0f);
+
+                const double tolerance = 1e-2;
                 
-                if (condition1.Equals("test") && condition2.Equals("moarolca"))
+                if (condition1.Equals("test") && condition2.Equals("moarolca") && Math.Abs(condition3 - 3.14f) < tolerance)
                 {
                     Console.WriteLine("Someone touched my tralala!");
                     
