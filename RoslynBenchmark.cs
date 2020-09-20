@@ -4,6 +4,7 @@ using System.Diagnostics;
 // ReSharper disable once CheckNamespace
 namespace TuneAsSharp
 {
+    // ReSharper disable once UnusedType.Global
     public static class RoslynBenchmark
     {
         public static void Run(int iterationCount = 100)
