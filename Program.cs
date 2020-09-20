@@ -1,7 +1,7 @@
 ﻿using System;
 
 // ReSharper disable once CheckNamespace
-namespace TweakAsSharp
+namespace TuneAsSharp
 {
     internal static class Program
     {

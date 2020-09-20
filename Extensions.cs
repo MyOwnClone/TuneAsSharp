@@ -1,6 +1,6 @@
 using System;
 
-namespace TweakAsSharp
+namespace TuneAsSharp
 {
     public static class Extensions
     {

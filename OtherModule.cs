@@ -1,4 +1,4 @@
-namespace TweakAsSharp
+namespace TuneAsSharp
 {
     public static class OtherModule
     {

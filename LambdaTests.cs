@@ -2,7 +2,7 @@ using System;
 using System.Threading.Tasks;
 using Microsoft.CodeAnalysis.CSharp.Scripting;
 
-namespace TweakAsSharp
+namespace TuneAsSharp
 {
     public class LambdaTests
     {

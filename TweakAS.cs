@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 
-namespace TweakAsSharp
+namespace TuneAsSharp
 {
     // ReSharper disable once InconsistentNaming
     // ReSharper disable once ArrangeTypeModifiers

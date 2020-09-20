@@ -3,7 +3,7 @@ using System.Linq;
 using Microsoft.CodeAnalysis.CSharp.Scripting;
 using Microsoft.CodeAnalysis.Scripting;
 
-namespace TweakAsSharp
+namespace TuneAsSharp
 {
     public static class Parser
     {
