@@ -28,8 +28,6 @@ namespace TuneAsSharp
 
             Console.WriteLine(UnitTestRunner.Run(false));
             Console.WriteLine(UnitTestRunner.Run(true));
-            
-            //UnitTest.TestFunctionNoRoslyn();
         }
     }
 }
