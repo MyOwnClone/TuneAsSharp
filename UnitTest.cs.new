@@ -24,9 +24,11 @@ namespace TuneAsSharp
 
                 var condition3 = (float) TweakAS.tv(3.14f);
 
+                var condition4 = (int) TweakAS.tv(42);
+
                 const double tolerance = 1e-2;
                 
-                if (condition1.Equals("test") && condition2.Equals("moarolca") && Math.Abs(condition3 - 3.14f) < tolerance)
+                if (condition1.Equals("test") && condition2.Equals("moarolca") && Math.Abs(condition3 - 3.14f) < tolerance && condition4 == 42)
                 {
                     Console.WriteLine("Someone touched my tralala!");
                     
