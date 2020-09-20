@@ -5,13 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3194e73a-d362-4508-b313-7d3dc6d28739" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TuneAsSharp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TuneAsSharp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OtherModuleUnitTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/OtherModuleUnitTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TweakAS.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TweakAS.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnitTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UnitTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnitTest.cs.new" beforeDir="false" afterPath="$PROJECT_DIR$/UnitTest.cs.new" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnitTest.cs.og" beforeDir="false" afterPath="$PROJECT_DIR$/UnitTest.cs.og" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UnitTestRunner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UnitTestRunner.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,6 +22,7 @@
     <setting file="mock:///Users/tomasv/work-2020/TuneAsSharp/TweakAS.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/tomasv/work-2020/TuneAsSharp/RoslynBenchmark.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/tomasv/work-2020/TuneAsSharp/OtherModuleUnitTest.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/tomasv/work-2020/TuneAsSharp/UnitTest.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/tomasv/work-2020/TuneAsSharp/UnitTest.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/tomasv/work-2020/TuneAsSharp/OtherModuleUnitTest.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/tomasv/work-2020/TuneAsSharp/OtherModuleUnitTest.cs" root0="SKIP_HIGHLIGHTING" />
@@ -50,10 +44,10 @@
         <option value="$PROJECT_DIR$/OtherModuleUnitTest.cs" />
         <option value="$PROJECT_DIR$/Program.cs" />
         <option value="$PROJECT_DIR$/UnitTest.cs.new" />
-        <option value="$PROJECT_DIR$/UnitTestRunner.cs" />
         <option value="$PROJECT_DIR$/TweakAS.cs" />
         <option value="$PROJECT_DIR$/UnitTest.cs.og" />
         <option value="$PROJECT_DIR$/UnitTest.cs" />
+        <option value="$PROJECT_DIR$/UnitTestRunner.cs" />
       </list>
     </option>
   </component>
@@ -98,7 +92,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1600590408868</updated>
-      <workItem from="1600590420437" duration="3990000" />
+      <workItem from="1600590420437" duration="4363000" />
     </task>
     <task id="LOCAL-00001" summary="Refactoring">
       <created>1600590522970</created>
@@ -121,7 +115,21 @@
       <option name="project" value="LOCAL" />
       <updated>1600594602485</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="tests updaded">
+      <created>1600595189195</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1600595189195</updated>
+    </task>
+    <task id="LOCAL-00005" summary="WIP">
+      <created>1600595213869</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1600595213869</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
@@ -130,6 +138,7 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Refactoring" />
     <MESSAGE value="Unit test added" />
+    <MESSAGE value="tests updaded" />
     <MESSAGE value="WIP" />
     <option name="LAST_COMMIT_MESSAGE" value="WIP" />
   </component>
@@ -142,26 +151,26 @@
       <screen x="0" y="0" width="3840" height="2160" />
     </state>
     <state x="1592" y="885" key="#com.intellij.fileTypes.FileTypeChooser/0.0.3840.2160@0.0.3840.2160" timestamp="1600591375171" />
-    <state x="1514" y="593" key="CommitChangelistDialog2" timestamp="1600595126521">
+    <state x="1514" y="593" key="CommitChangelistDialog2" timestamp="1600595213773">
       <screen x="0" y="0" width="3840" height="2160" />
     </state>
-    <state x="1514" y="593" key="CommitChangelistDialog2/0.0.3840.2160@0.0.3840.2160" timestamp="1600595126521" />
-    <state width="3798" height="656" key="GridCell.Tab.0.bottom" timestamp="1600594856976">
+    <state x="1514" y="593" key="CommitChangelistDialog2/0.0.3840.2160@0.0.3840.2160" timestamp="1600595213773" />
+    <state width="3798" height="656" key="GridCell.Tab.0.bottom" timestamp="1600595218686">
       <screen x="0" y="0" width="3840" height="2160" />
     </state>
-    <state width="3798" height="656" key="GridCell.Tab.0.bottom/0.0.3840.2160@0.0.3840.2160" timestamp="1600594856976" />
-    <state width="3798" height="656" key="GridCell.Tab.0.center" timestamp="1600594856975">
+    <state width="3798" height="656" key="GridCell.Tab.0.bottom/0.0.3840.2160@0.0.3840.2160" timestamp="1600595218686" />
+    <state width="3798" height="656" key="GridCell.Tab.0.center" timestamp="1600595218685">
       <screen x="0" y="0" width="3840" height="2160" />
     </state>
-    <state width="3798" height="656" key="GridCell.Tab.0.center/0.0.3840.2160@0.0.3840.2160" timestamp="1600594856975" />
-    <state width="3798" height="656" key="GridCell.Tab.0.left" timestamp="1600594856974">
+    <state width="3798" height="656" key="GridCell.Tab.0.center/0.0.3840.2160@0.0.3840.2160" timestamp="1600595218685" />
+    <state width="3798" height="656" key="GridCell.Tab.0.left" timestamp="1600595218684">
       <screen x="0" y="0" width="3840" height="2160" />
     </state>
-    <state width="3798" height="656" key="GridCell.Tab.0.left/0.0.3840.2160@0.0.3840.2160" timestamp="1600594856974" />
-    <state width="3798" height="656" key="GridCell.Tab.0.right" timestamp="1600594856975">
+    <state width="3798" height="656" key="GridCell.Tab.0.left/0.0.3840.2160@0.0.3840.2160" timestamp="1600595218684" />
+    <state width="3798" height="656" key="GridCell.Tab.0.right" timestamp="1600595218685">
       <screen x="0" y="0" width="3840" height="2160" />
     </state>
-    <state width="3798" height="656" key="GridCell.Tab.0.right/0.0.3840.2160@0.0.3840.2160" timestamp="1600594856975" />
+    <state width="3798" height="656" key="GridCell.Tab.0.right/0.0.3840.2160@0.0.3840.2160" timestamp="1600595218685" />
     <state width="3798" height="829" key="GridCell.Tab.1.bottom" timestamp="1600594683098">
       <screen x="0" y="0" width="3840" height="2160" />
     </state>
@@ -226,23 +235,23 @@
       <screen x="0" y="0" width="3840" height="2160" />
     </state>
     <state width="3798" height="829" key="GridCell.Tab.4.right/0.0.3840.2160@0.0.3840.2160" timestamp="1600594683105" />
-    <state x="1712" y="712" key="RollbackChangesDialog" timestamp="1600594571121">
+    <state x="1712" y="712" key="RollbackChangesDialog" timestamp="1600595205811">
       <screen x="0" y="0" width="3840" height="2160" />
     </state>
-    <state x="1712" y="712" key="RollbackChangesDialog/0.0.3840.2160@0.0.3840.2160" timestamp="1600594571121" />
+    <state x="1712" y="712" key="RollbackChangesDialog/0.0.3840.2160@0.0.3840.2160" timestamp="1600595205811" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/UnitTestRunner.cs</url>
-          <line>14</line>
+          <line>15</line>
           <properties documentPath="$PROJECT_DIR$/UnitTestRunner.cs" initialLine="14">
             <startOffsets>
-              <option value="317" />
+              <option value="334" />
             </startOffsets>
             <endOffsets>
-              <option value="333" />
+              <option value="350" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />

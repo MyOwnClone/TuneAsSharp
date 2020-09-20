@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.Threading;
 
 namespace TuneAsSharp
@@ -30,16 +31,33 @@ namespace TuneAsSharp
             return properExit;
         }
 
+        static void RepeatUntilNoException(Action action)
+        {
+            while (true)
+            {
+                try
+                {
+                    action();
+                }
+                catch (IOException)
+                {
+                    continue;   
+                }
+
+                break;
+            }
+        }
+
         public static void TriggerChange()
         {
-            System.IO.File.Copy("UnitTest.cs.new", "UnitTest.cs", true);
-            System.IO.File.Copy("OtherModuleUnitTest.cs.new", "OtherModuleUnitTest.cs", true);
+            RepeatUntilNoException(() => File.Copy("UnitTest.cs.new", "UnitTest.cs", true));
+            RepeatUntilNoException(() => System.IO.File.Copy("OtherModuleUnitTest.cs.new", "OtherModuleUnitTest.cs", true));
         }
 
         public static void Clean()
         {
-            System.IO.File.Copy("UnitTest.cs.og", "UnitTest.cs", true);
-            System.IO.File.Copy("OtherModuleUnitTest.cs.og", "OtherModuleUnitTest.cs", true);
+            RepeatUntilNoException(() => File.Copy("UnitTest.cs.og", "UnitTest.cs", true));
+            RepeatUntilNoException(() => File.Copy("OtherModuleUnitTest.cs.og", "OtherModuleUnitTest.cs", true));
         }
     }
 }
