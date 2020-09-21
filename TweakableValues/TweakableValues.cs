@@ -5,7 +5,7 @@ using TuneAsSharp;
 // ReSharper disable once CheckNamespace
 namespace TweakableValues
 {
-    internal static class Program
+    internal static class TweakableValues
     {
         private static void Main()
         {

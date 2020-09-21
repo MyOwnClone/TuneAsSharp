@@ -3,14 +3,15 @@ using TuneAsSharp;
 
 namespace TweakableFunctions
 {
-    class Program
+    internal static class TweakableFunctions
     {
         [TweakableFunction]
-        private static int test()
+        private static int Test()
         {
             return 0;
         }
         
+        // ReSharper disable once InconsistentNaming
         private static object tf(Func<object> action)    /* Action<> is not able to return value, Func<> is  */
         {
             /*
@@ -31,7 +32,7 @@ namespace TweakableFunctions
         {
             while (true)
             {
-                Console.WriteLine(tf(() => test()));
+                Console.WriteLine(tf(() => Test()));
             }
         }
     }
