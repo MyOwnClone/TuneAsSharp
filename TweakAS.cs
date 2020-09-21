@@ -7,7 +7,7 @@ namespace TuneAsSharp
 {
     // ReSharper disable once InconsistentNaming
     // ReSharper disable once ArrangeTypeModifiers
-    static class TweakAS
+    public static class TweakAS
     {
         // not thread safe I guess
         private const string TokenToLookFor = "t" + "v";

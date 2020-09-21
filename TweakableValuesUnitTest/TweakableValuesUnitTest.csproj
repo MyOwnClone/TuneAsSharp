@@ -5,11 +5,6 @@
         <TargetFramework>netcoreapp3.1</TargetFramework>
     </PropertyGroup>
 
-    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-      <Optimize>false</Optimize>
-      <DebugType>pdbonly</DebugType>
-    </PropertyGroup>
-
     <ItemGroup>
       <ProjectReference Include="..\TuneAsSharp.csproj" />
     </ItemGroup>

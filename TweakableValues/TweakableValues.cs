@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq.Expressions;
 using TuneAsSharp;
 
 // ReSharper disable once CheckNamespace
@@ -11,7 +10,7 @@ namespace TweakableValues
         {
             //RoslynBenchmark.Run();
 
-            /*Parser.UseRoslyn =
+            Parser.UseRoslyn =
                 false; // simpler literals can be parsed without Roslyn, we'll need it only for actual code (tweakable functions)
 
             var counter = 0;
@@ -20,16 +19,13 @@ namespace TweakableValues
             {
                 Console.WriteLine(counter + " " + TweakAS.tv("test") + " " + TweakAS.tv("moarolka"));
 
-                //Console.WriteLine( counter + " " + TweakAS.tv("gloryhole")); 
-                //Console.WriteLine( counter + " " + TweakAS.tv("testxyz"));
+                Console.WriteLine( counter + " " + TweakAS.tv("gloryhole")); 
+                Console.WriteLine( counter + " " + TweakAS.tv("testxyz"));
 
                 Console.WriteLine(OtherModule.MethodWithTweakableValue());
 
                 counter++;
-            }*/
-
-            Console.WriteLine(UnitTestRunner.Run(false));
-            Console.WriteLine(UnitTestRunner.Run(true));
+            }
         }
     }
 }
