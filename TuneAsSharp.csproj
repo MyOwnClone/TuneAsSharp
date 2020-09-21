@@ -1,9 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <OutputType>Exe</OutputType>
         <TargetFramework>netcoreapp3.1</TargetFramework>
-        <LangVersion>9</LangVersion>
+        <LangVersion>8</LangVersion>
         <RootNamespace>TuneAsSharp</RootNamespace>
     </PropertyGroup>
 
@@ -20,6 +19,21 @@
 
     <ItemGroup>
       <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Scripting" Version="3.8.0-2.final" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="TweakableValues\**" />
+      <Compile Remove="TweakableFunctions\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="TweakableValues\**" />
+      <EmbeddedResource Remove="TweakableFunctions\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="TweakableValues\**" />
+      <None Remove="TweakableFunctions\**" />
     </ItemGroup>
 
 </Project>
