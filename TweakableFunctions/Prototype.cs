@@ -3,7 +3,7 @@ using TuneAsSharp;
 
 namespace TweakableFunctions
 {
-    internal static class TweakableFunctions
+    internal static class Prototype
     {
         [TweakableFunction]
         private static int Test()
@@ -30,6 +30,8 @@ namespace TweakableFunctions
 
         static void Main(string[] args)
         {
+            // this seems to be spawning another thread or something because even if I quit the program from Rider, it still spills out to the stdout (but it ends after some time???)
+            
             while (true)
             {
                 Console.WriteLine(tf(() => Test()));

@@ -12,7 +12,7 @@ namespace TuneAsSharp
         public static bool UseRoslyn = true;
         private static bool _warmUpDone;
 
-        public static object EvaluateWithRoslyn(string code)
+        private static object EvaluateWithRoslyn(string code)
         {
             return BaseScript.ContinueWith(code).RunAsync().Result.ReturnValue;
         }

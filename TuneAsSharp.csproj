@@ -25,18 +25,21 @@
       <Compile Remove="TweakableValues\**" />
       <Compile Remove="TweakableFunctions\**" />
       <Compile Remove="TweakableValuesUnitTest\**" />
+      <Compile Remove="Temp\**" />
     </ItemGroup>
 
     <ItemGroup>
       <EmbeddedResource Remove="TweakableValues\**" />
       <EmbeddedResource Remove="TweakableFunctions\**" />
       <EmbeddedResource Remove="TweakableValuesUnitTest\**" />
+      <EmbeddedResource Remove="Temp\**" />
     </ItemGroup>
 
     <ItemGroup>
       <None Remove="TweakableValues\**" />
       <None Remove="TweakableFunctions\**" />
       <None Remove="TweakableValuesUnitTest\**" />
+      <None Remove="Temp\**" />
     </ItemGroup>
 
 </Project>

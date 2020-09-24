@@ -20,11 +20,11 @@ namespace TuneAsSharp
 
             while (true)
             {
-                var condition1 = (string) TweakAS.tv("empty"); var condition2 = (string) TweakAS.tv("empty2");
+                var condition1 = (string) Tune.tv("empty"); var condition2 = (string) Tune.tv("empty2");
 
-                var condition3 = (float) TweakAS.tv(0.0f);
+                var condition3 = (float) Tune.tv(0.0f);
 
-                var condition4 = (int) TweakAS.tv(0);
+                var condition4 = (int) Tune.tv(0);
 
                 var condition5 = OtherModuleUnitTest.MethodWithTweakableValue();
 

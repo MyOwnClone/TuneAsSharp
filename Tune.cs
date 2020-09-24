@@ -7,7 +7,7 @@ namespace TuneAsSharp
 {
     // ReSharper disable once InconsistentNaming
     // ReSharper disable once ArrangeTypeModifiers
-    public static class TweakAS
+    public static class Tune
     {
         // not thread safe I guess
         private const string TokenToLookFor = "t" + "v";
@@ -138,7 +138,7 @@ namespace TuneAsSharp
 
         private static int GetCallCount(int frameIndex = 3)
         {
-            var (filename, line, _, offset) = TweakAS.GetFileLineColumnInfo(frameIndex);
+            var (filename, line, _, offset) = Tune.GetFileLineColumnInfo(frameIndex);
 
             if (LineMap.ContainsKey(filename))
             {
