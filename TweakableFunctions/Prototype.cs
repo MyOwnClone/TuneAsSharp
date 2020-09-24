@@ -28,7 +28,7 @@ namespace TweakableFunctions
             return action();
         }
 
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             // this seems to be spawning another thread or something because even if I quit the program from Rider, it still spills out to the stdout (but it ends after some time???)
             

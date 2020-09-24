@@ -1,14 +1,13 @@
-﻿using System;
-using TuneAsSharp;
+﻿using TuneAsSharp;
 
 namespace TweakableValuesUnitTest
 {
     internal static class Test
     {
-        private static void Main(string[] args)
+        private static void Main()
         {
-            Console.WriteLine(UnitTestRunner.Run(false));
-            Console.WriteLine(UnitTestRunner.Run(true));
+            UnitTestRunner.Run(false);
+            UnitTestRunner.Run(true);
         }
     }
 }

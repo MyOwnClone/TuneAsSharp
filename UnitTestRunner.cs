@@ -6,11 +6,9 @@ namespace TuneAsSharp
 {
     public static class UnitTestRunner
     {
-        public static bool Run(bool useRoslyn)
+        public static void Run(bool useRoslyn)
         {
-            Thread thread = null;
-            
-            thread = useRoslyn ? new Thread(UnitTest.TestFunctionRoslyn) : new Thread(UnitTest.TestFunctionNoRoslyn);
+            var thread = useRoslyn ? new Thread(UnitTest.TestFunctionRoslyn) : new Thread(UnitTest.TestFunctionNoRoslyn);
             
             thread.Start();
             
@@ -22,7 +20,7 @@ namespace TuneAsSharp
 
             if (!properExit)
             {
-                string no = "No";
+                const string no = "No";
                 
                 Console.WriteLine($"{(useRoslyn ? string.Empty : no )}Roslyn Test FAILED!");
                 
@@ -32,11 +30,9 @@ namespace TuneAsSharp
             }
             
             Clean();
-
-            return properExit;
         }
 
-        static void RepeatUntilNoException(Action action)
+        private static void RepeatUntilNoException(Action action)
         {
             while (true)
             {
@@ -53,13 +49,13 @@ namespace TuneAsSharp
             }
         }
 
-        public static void TriggerChange()
+        private static void TriggerChange()
         {
             RepeatUntilNoException(() => File.Copy("UnitTest.cs.new", "UnitTest.cs", true));
             RepeatUntilNoException(() => System.IO.File.Copy("OtherModuleUnitTest.cs.new", "OtherModuleUnitTest.cs", true));
         }
 
-        public static void Clean()
+        private static void Clean()
         {
             RepeatUntilNoException(() => File.Copy("UnitTest.cs.og", "UnitTest.cs", true));
             RepeatUntilNoException(() => File.Copy("OtherModuleUnitTest.cs.og", "OtherModuleUnitTest.cs", true));

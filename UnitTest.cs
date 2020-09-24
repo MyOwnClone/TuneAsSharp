@@ -2,7 +2,7 @@ using System;
 
 namespace TuneAsSharp
 {
-    public class UnitTest
+    public static class UnitTest
     {
         public static void TestFunctionNoRoslyn()
         {
@@ -14,7 +14,7 @@ namespace TuneAsSharp
             TestFunction(true);
         }
 
-        public static void TestFunction(bool useRoslyn = false)
+        private static void TestFunction(bool useRoslyn = false)
         {
             Parser.UseRoslyn = useRoslyn;
 
