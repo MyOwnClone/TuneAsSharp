@@ -8,5 +8,6 @@
              */
 
 TODO list:
-- tweakable functions
+- unity support ?
+- tweakable functions ? (as seen in tweak_af for Python, not sure about getting it working)
 - automatic versioning of changes?
