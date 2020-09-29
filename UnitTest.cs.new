@@ -2,7 +2,7 @@ using System;
 
 namespace TuneAsSharp
 {
-    public class UnitTest
+    public static class UnitTest
     {
         public static void TestFunctionNoRoslyn()
         {

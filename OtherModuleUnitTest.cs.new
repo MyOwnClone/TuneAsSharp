@@ -1,6 +1,6 @@
 namespace TuneAsSharp
 {
-    public class OtherModuleUnitTest
+    public static class OtherModuleUnitTest
     {
         public static int MethodWithTweakableValue()
         {
