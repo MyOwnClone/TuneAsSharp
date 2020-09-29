@@ -16,6 +16,7 @@ tune values in your (already) running apps by editing your sources! See `Example
 
 TODO list:
 ==
+- FS Notification triggered reload ?
 - unity support ? (probably with disabled Roslyn)
 - tweakable functions ? (as seen in tweak_af for Python, not sure about getting it working)
 - automatic versioning of changes?
