@@ -7,7 +7,7 @@ tune values in your (already) running apps by editing your sources!
  ==           
  For **RELEASE BUILD**, set compilation options to:
  
- - optimize code: DISABLED :-( 
+ - optimize code: DISABLED :-( (you can enable optimization in other modules, though)
  - debug symbols: ENABLED, debug type: PDB-only
  
  (otherwise, the line info stack trace analysis won't work and will return incorrect line numbers, effectively breaking the code)
