@@ -8,6 +8,6 @@
              */
 
 TODO list:
-- unity support ?
+- unity support ? (probably with disabled Roslyn)
 - tweakable functions ? (as seen in tweak_af for Python, not sure about getting it working)
 - automatic versioning of changes?
