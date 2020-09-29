@@ -1,7 +1,7 @@
 TuneAsSharp!!! (WIP)
 ==
 
-tune values in your (already) running apps by editing your sources!
+tune values in your (already) running apps by editing your sources! See `Example.cs`
             
  Notice:
  ==           
