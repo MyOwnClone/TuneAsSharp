@@ -14,7 +14,7 @@ namespace TuneAsSharp
             TestFunction(true);
         }
 
-        public static void TestFunction(bool useRoslyn = false)
+        private static void TestFunction(bool useRoslyn = false)
         {
             Parser.UseRoslyn = useRoslyn;
 
