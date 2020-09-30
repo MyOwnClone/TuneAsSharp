@@ -1,7 +1,7 @@
 TuneAsSharp!!! (WIP)
 ==
 
-Tune values in your (already) running apps by editing your sources! See `Example.cs`
+Tune values in your (already) running apps by editing your sources! See `TweakableValues/Example.cs`
 
 **Very buggy and work in progress!**
 
