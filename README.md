@@ -7,6 +7,8 @@ Tune values in your (already) running apps by editing your sources! See `Example
 
 inspired by https://github.com/joeld42/ld48jovoc/blob/master/util/tweakval/tweakval.cpp and friends
 
+port of my `tweak_af` (Python): https://github.com/MyOwnClone/tweak_af
+
 TLDR:
 ==
 Put `Tune.tv("default")` calls in your sources. Run your code, let it running and during that, change the `"default"` to whatever you want (which wont break your code). See that your code sees the updated value.
